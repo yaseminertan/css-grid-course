@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class='container3'>
+        <div class='item'>1</div>
+        <div class='item'>2</div>
+        <div class='item'>3</div>
+        <div class='item'>4</div>
+        <div class='item'>5</div>
+        <div class='item'>6</div>
+        <div class='item'>7</div>
+        <div class='item'>8</div>
+        <div class='item'>9</div>
+        <div class='item'>10</div>
+    </div>
+    <p></p>
+    <div class='container2'>
+        <div class='item'>1</div>
+        <div class='item'>2</div>
+        <div class='item'>3</div>
+        <div class='item'>4</div>
+    </div>
+</body>
+</html>
+<style>
+    .container3{
+        display: grid;
+        grid-gap:20px;
+        border:2px solid var(--black);
+        /* grid-template-columns:  auto 200px 1fr; */
+        grid-template-columns: repeat(2, 1fr auto) 20px repeat(2,5fr);
+    }
+    .container2{
+        display: grid;
+        grid-gap:20px;
+        grid-template-columns: 200px 400px;     /* explicitly defined*/
+        /* grid-template-rows: 50px 100px; */
+        grid-auto-rows: 500px;  /* only one value */  /* implicitly defined */
+        grid-auto-flow: column; /*all items as one column*/
+    }
+    .container1{
+        display: grid;
+        grid-template-columns: 80px auto 20% 10rem;
+        grid-template-rows: repeat(2,50px);
+        grid-gap:20px
+    }
+</style>

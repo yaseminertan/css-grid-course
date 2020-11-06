@@ -1,0 +1,27 @@
+:root{
+    --yellow:#ffc600;
+    --black:#272727;
+}
+html{
+    box-sizing:border-box;
+    
+}
+body{
+    background-color: lightcoral;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+.item{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow);
+    border: 2px solid lightseagreen;
+    border-radius: 5px;
+}
+p{
+    font-size: 50px;
+    border-bottom: 10px solid var(--yellow);
+    color:var(--black);
+}
